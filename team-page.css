@@ -1,0 +1,234 @@
+/* v1.0.1 - Force Refresh */
+/* team-page.css */
+:root {
+  --bg-color: #000099;
+  --text-color: #FFFFFF;
+  --accent-color: #CCFFFF;
+  --link-color: #FFFFFF;
+  --link-hover-color: #99FFFF;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-hover: rgba(255, 255, 255, 0.2);
+  --font-family: 'Verdana', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center main content */
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center blocks like gallery */
+  gap: 30px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--btn-bg);
+  padding: 10px 15px; /* Reduced vertical padding */
+  border: 1px solid rgba(204, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  flex: 0 1 180px;
+}
+
+.item.is-logo {
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.1);
+  padding-top: 5px;   /* Extra reduction for logo box */
+  padding-bottom: 5px;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  background-color: var(--btn-hover);
+  border-color: var(--accent-color);
+}
+
+.item .image-wrapper {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.caption {
+  display: none; /* Hide 'Logo' and other captions in team pages by default */
+}
+
+.decade-section {
+  width: 100%;
+  text-align: left;
+  align-self: stretch; /* Take full width of main container */
+}
+
+.decade-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-left: 4px solid var(--accent-color); /* Back to left border for left align */
+  display: inline-block;
+  padding: 0 10px 0 15px;
+  text-transform: uppercase;
+}
+
+/* Ensure up to 10 items per row */
+.link-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Force single row */
+  justify-content: flex-start;
+  gap: 8px;
+  width: 100%;
+  overflow-x: auto; /* Fallback for very small screens */
+  padding-bottom: 5px;
+}
+
+.nav-button {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  flex: 0 1 auto; /* Changed to allow shrinking */
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.back-link {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 8px 30px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+}
+
+.back-link:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+/* Specific centering for 'Others' section at the end */
+main .decade-section:last-of-type {
+  text-align: center;
+}
+
+main .decade-section:last-of-type .decade-title {
+  border-left: none;
+  border-bottom: 2px solid var(--accent-color);
+  padding: 0 15px 5px 15px;
+}
+
+main .decade-section:last-of-type .link-grid {
+  justify-content: center;
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 1024px) {
+  .link-grid {
+    flex-wrap: wrap; /* Allow wrapping on tablets/mobile */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+  
+  .item {
+    flex: 0 1 180px; /* Locked flex basis, no grow */
+    max-width: 200px;
+  }
+
+  .item .image-wrapper {
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 100%;
+    max-width: 280px;
+  }
+  
+  .nav-button {
+    flex: 1 1 100px; /* Allow buttons to expand slightly */
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,224 @@
+/* modern-legacy.css */
+:root {
+  --bg-color: #000099;
+  --text-color: #FFFFFF;
+  --accent-color: #CCFFFF;
+  --link-color: #FFFFFF;
+  --link-hover-color: #99FFFF;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-hover: rgba(255, 255, 255, 0.2);
+  --font-family: 'Verdana', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* header and h1 styling */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 0;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--btn-bg);
+  padding: 15px;
+  border: 1px solid rgba(204, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  flex: 1 1 220px;
+  max-width: 300px;
+}
+
+.item.is-logo {
+  flex: 0 0 150px;
+  background-color: transparent;
+  border-color: rgba(255,255,255,0.1);
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  background-color: var(--btn-hover);
+  border-color: var(--accent-color);
+}
+
+.item .image-wrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.caption {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.decade-section {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decade-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-style: italic;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--accent-color);
+  padding: 0 15px 5px 15px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.nav-button {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Welcome Page Specifics */
+.item.is-welcome {
+  max-width: 1100px;
+  width: 95%;
+  min-height: 350px;
+  background-color: var(--btn-bg);
+  border-color: rgba(204, 255, 255, 0.4);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item.is-welcome .image-wrapper {
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.item.is-welcome img {
+  height: 45px;
+}
+
+.item.is-welcome .caption {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.item.is-welcome .caption p {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.item.is-welcome .caption p:last-child {
+  margin-bottom: 0;
+}
+
+.nav-button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  text-align: center;
+}
+
+.back-link {
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  padding: 8px 30px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 1rem;
+  transition: all 0.2s;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+}
+
+.back-link:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-decoration: none;
+}
