@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITALY TEAMS</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
     <link rel="stylesheet" href="/country-grid.css">
-</head>
+<link rel="stylesheet" href="/modern-legacy.css">
+</HEAD>
 <body class="legacy-page align-left">
     <header>
         <h1>ITALY TEAMS</h1>
@@ -547,13 +549,14 @@
   
         
     </main>
+    
+    
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
-    
-    
     <script>
-      // Navigation Bridge for React Router
       document.addEventListener('click', (e) => {
         const link = e.target.closest('a');
         if (link && link.href && link.href.startsWith(window.location.origin)) {
@@ -562,22 +565,11 @@
           window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
         }
       });
-
-      // Height Reporting for Auto-Resize
-      const sendHeight = () => {
-        const height = Math.max(
-          document.body.scrollHeight, 
-          document.documentElement.scrollHeight,
-          document.body.offsetHeight,
-          document.documentElement.offsetHeight
-        );
-        window.parent.postMessage({ type: 'RESIZE', height }, '*');
-      };
-      window.addEventListener('load', sendHeight);
-      window.addEventListener('resize', sendHeight);
-      setTimeout(sendHeight, 500);
-      setInterval(sendHeight, 2000);
+      const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
+      window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+
 

@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD><TITLE>2011</TITLE>
+<HTML><HEAD><TITLE>2011</title>
+    <link rel="stylesheet" href="/modern-legacy.css">
 <META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
 <META content="MSHTML 6.00.2726.2500" name=GENERATOR>
 <style type=text/css>
@@ -27,8 +28,9 @@ BODY {
 -->
 a:rover {text-decoration:und
 </style>
+<link rel="stylesheet" href="/modern-legacy.css">
 </HEAD>
-<BODY text=#ffffff vLink=#ffffff aLink=#ffffff link=#ffffff bgColor=#000099>
+<BODY class="legacy-page align-left" text=#ffffff vLink=#ffffff aLink=#ffffff link=#ffffff bgColor=#000099>
 <P align=center><FONT face="Verdana, Arial, Helvetica, sans-serif" 
 size=5><I><B>2011</B></I></FONT></P>
 <HR>
@@ -140,14 +142,31 @@ size=5><I><B>2011</B></I></FONT></P>
     </div>
 </div>
   <i><b><font face="Verdana, Arial, Helvetica, sans-serif" size="3" color="#FFFFFF"><a href="cruzeiro.htm" target="mainFrame"><br>
-  CRUZEIRO</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../brazil.htm" target="mainFrame">TEAMS</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../../paises.htm" target="mainFrame">COLLECTION</a> 
+  CRUZEIRO</a>                     
 </font></b></i> </div>
 <p></p>
-<DIV align=left></DIV></BODY>
+<DIV align=left></DIV>    <footer>
+        <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
+    </footer>
+    <script>
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (link && link.href && link.href.startsWith(window.location.origin)) {
+          if (link.href.includes('javascript') || link.href.includes('#')) return;
+          const path = link.href.replace(window.location.origin, '');
+          window.parent.postMessage({ type: 'NAVIGATE', path }, '*');
+        }
+      });
+      const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
+      window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
+    </script>
+</body>
 <style type=text/css>
 	a:rover {text-decoration:underline;}
 	a{text-decoration:none;}
 </style>
 </HTML>
+
 
 

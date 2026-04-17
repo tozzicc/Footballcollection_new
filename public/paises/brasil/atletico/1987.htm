@@ -151,6 +151,8 @@
   
         
     </main>
+    
+    
     <footer>
         <a href="javascript:history.back()" class="back-link">VOLTAR / BACK</a>
     </footer>
@@ -165,6 +167,8 @@
       });
       const sh = () => { window.parent.postMessage({ type: 'RESIZE', height: document.documentElement.scrollHeight }, '*'); };
       window.addEventListener('load', sh); window.addEventListener('resize', sh); setTimeout(sh, 500);
+      setInterval(sh, 2000);
     </script>
 </body>
 </html>
+
