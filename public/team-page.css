@@ -1,3 +1,4 @@
+/* v1.0.1 - Force Refresh */
 /* team-page.css */
 :root {
   --bg-color: #000099;
@@ -211,7 +212,7 @@ main .decade-section:last-of-type .link-grid {
   }
   
   .item {
-    flex: 1 1 140px;
+    flex: 0 1 180px; /* Locked flex basis, no grow */
     max-width: 200px;
   }
 

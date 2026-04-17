@@ -1,3 +1,4 @@
+/* v1.0.1 - Force Refresh */
 /* country-grid.css */
 :root {
   --bg-color: #000099;
@@ -66,7 +67,7 @@ main {
   border: 1px solid rgba(204, 255, 255, 0.3);
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-  flex: 1 1 150px;
+  flex: 0 1 180px; /* Locked flex basis, no grow */
   max-width: 200px;
 }
 
